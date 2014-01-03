@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Asteroids</title>
+  <script type="application/javascript"
+           src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+  </script>
+  <script type="application/javascript" src="keymaster.js"></script>
+</head>
+
+<body>
+
+  <canvas id="asteroids" style="background-color: black;"></canvas>
+
+  <script type="application/javascript" src="moving_object.js"></script>
+  <script type="application/javascript" src="asteroid.js"></script>
+  <script type="application/javascript" src="game.js"></script>
+  <script type="application/javascript" src="ship.js"></script>
+  <script type="application/javascript" src="bullet.js"></script>
+  <script type="application/javascript">
+    var canvas = document.getElementById("asteroids");
+    canvas.width = Asteroids.Game.DIM_X;
+    canvas.height = Asteroids.Game.DIM_Y;
+    var ctx = canvas.getContext('2d');
+    new Asteroids.Game(ctx, 10).start();
+  </script>
+</body>
+</html>
